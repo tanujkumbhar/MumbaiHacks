@@ -1,0 +1,31 @@
+{
+  "name": "taxwise-monorepo",
+  "version": "1.0.0",
+  "description": "Monorepo for the taxwise project, containing the FastAPI backend and Next.js frontend.",
+  "private": true,
+  "scripts": {
+    "setup": "npm run backend:setup && npm install && npm run install-deps",
+    "install-deps": "npm run backend:install && npm run frontend:install",
+
+    "dev": "concurrently \"npm:backend:dev\" \"npm:frontend:dev\"",
+
+    "backend:setup": "python3 -m venv backend/venv",
+    "backend:install": "backend/venv/bin/pip install -r backend/requirements.txt",
+    "backend:dev": "backend/venv/bin/python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000 --app-dir backend",
+
+    "frontend:install": "npm install --prefix frontend",
+    "frontend:dev": "npm run dev --workspace=frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "python": ">=3.8.0"
+  },
+  "workspaces": [
+    "frontend"
+  ],
+  "author": "TaxWise Team",
+  "license": "MIT"
+}

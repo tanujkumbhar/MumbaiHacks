@@ -1,0 +1,80 @@
+# -------------------------
+# Node.js / Next.js (frontend)
+# -------------------------
+/frontend/node_modules
+/frontend/.next
+/frontend/out
+/frontend/build
+frontend/package-lock.json
+
+# Yarn / pnpm
+/frontend/.pnp
+/frontend/.pnp.*
+/frontend/.yarn/*
+!/frontend/.yarn/patches
+!/frontend/.yarn/plugins
+!/frontend/.yarn/releases
+!/frontend/.yarn/versions
+
+# Testing
+/frontend/coverage
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+
+# Typescript build files
+/frontend/*.tsbuildinfo
+/frontend/next-env.d.ts
+
+# Vercel
+/frontend/.vercel
+
+# -------------------------
+# Python / FastAPI (backend)
+# -------------------------
+/backend/venv
+/backend/__pycache__/
+/backend/app/__pycache__/
+/backend/*.db
+/backend/*.sqlite3
+/backend/alembic/versions/*.pyc
+
+# Logs
+/backend/*.log
+
+# Python bytecode
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual env variations
+/backend/env/
+/backend/.venv/
+backend/ENV/
+backend/agent_workspace/
+
+# Alembic migration cache
+/backend/alembic/__pycache__/
+
+# -------------------------
+# Environment files
+# -------------------------
+.env
+.env.*
+*.env
+
+# -------------------------
+# OS / Editor specific
+# -------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+node_modules
